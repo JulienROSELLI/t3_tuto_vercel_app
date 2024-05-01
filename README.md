@@ -6,7 +6,7 @@
   - well in the end for the tuto did it with vercel
 - [x] Scaffold Basic UI with mock data(install postgres self hosted)
 - [x] tidy up build
-- [ ] Actually set up a database
+- [x] Actually set up a database
 - [ ] Attach database to ui
 - [ ] Add authentication (w/clerk but have to c-out nextAuth.js)
 - [ ] Add image upload
