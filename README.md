@@ -7,8 +7,9 @@
 - [x] Scaffold Basic UI with mock data(install postgres self hosted)
 - [x] tidy up build
 - [x] Actually set up a database
-- [ ] Attach database to ui
-- [ ] Add authentication (w/clerk but have to c-out nextAuth.js)
+- [x] Attach database to ui
+- [x] Add authentication (w/clerk)
+  - [ ] Check-out nextAuth.js
 - [ ] Add image upload
 - [ ] Error Managment (w/sentry?)
 - [ ] Routing/image page (parralel route)
