@@ -10,7 +10,10 @@
 - [x] Attach database to ui
 - [x] Add authentication (w/clerk)
   - [ ] Check-out nextAuth.js
-- [ ] Add image upload
+- [x] Add image upload
+  - [ ] w/uploadthing.com have to remove this dependency after
+- [ ] Taint (server only)
+- [ ] Use Next/image component
 - [ ] Error Managment (w/sentry?)
 - [ ] Routing/image page (parralel route)
 - [ ] Delete button (w/ server actions)
