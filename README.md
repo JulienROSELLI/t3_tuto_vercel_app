@@ -12,7 +12,7 @@
   - [ ] Check-out nextAuth.js
 - [x] Add image upload
   - [ ] w/uploadthing.com have to remove this dependency after
-- [ ] Taint (server only)
+- [x] Taint (server only) ** safe request handling force server side [Taint docs ](https://nextjs.org/blog/security-nextjs-server-components-actions) **
 - [ ] Use Next/image component
 - [ ] Error Managment (w/sentry?)
 - [ ] Routing/image page (parralel route)
