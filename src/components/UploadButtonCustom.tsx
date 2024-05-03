@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+
 import { toast } from "sonner";
 
 import { useUploadThing } from "utils/uploadthing";
@@ -32,44 +32,70 @@ const useUploadThingInputProps = (...args: Input) => {
   };
 };
 
+/**
+ * SimpleUploadButton component that allows users to upload images.
+ *
+ * This component renders a label and an input element for file upload.
+ * When the user selects files to upload, the `onChange` event handler is called,
+ * which starts the upload process.
+ * After the upload process is complete, the `onClientUploadComplete` function is called,
+ * which dismisses the loading spinner and displays a success message using the `toast` function.
+ * The `useRouter` hook is used to refresh the page when the upload is complete.
+ */
 export default function SimpleUploadButton() {
+  // Get the router object using the `useRouter` hook
   const router = useRouter();
 
-  useEffect(() => {
-    toast(
-      <div>
-        <LoadingSpinnerSVG />
-        Uploading...
-      </div>,
-      {
-        duration: Infinity,
-        id: "upload-begin",
-      },
-    );
-  }, []);
-
+  // Call the `useUploadThingInputProps` function to get the input props
   const { inputProps } = useUploadThingInputProps("imageUploader", {
+    /**
+     * Handler function that is called when the upload process begins.
+     *
+     * This function is triggered when the user starts uploading files. It shows
+     * a loading spinner and a message to indicate that the upload is in progress.
+     * The loading spinner is displayed using the `LoadingSpinnerSVG` component,
+     * and the message is displayed using the `toast` function from the `sonner`
+     * library. The `Infinity` duration is used to keep the toast message visible
+     * until it is dismissed manually. The unique identifier `"upload-begin"` is
+     * passed to the `toast` function to allow for dismissing this specific toast
+     * message at a later time.
+     */
     onUploadBegin() {
+      // Show a loading spinner and a message to indicate that the upload is in progress
       toast(
         <div>
+          {/* Display the loading spinner */}
           <LoadingSpinnerSVG />
+          {/* Display the message */}
           Uploading...
         </div>,
         {
+          // Set the duration to Infinity to keep the toast message visible until it is dismissed manually
           duration: Infinity,
+          // Set the unique identifier to "upload-begin" to allow for dismissing this specific toast message at a later time
           id: "upload-begin",
         },
       );
     },
+    /**
+     * Handler function that is called when the client-side upload process is complete.
+     *
+     * This function is triggered when the client-side upload process is complete.
+     * It dismisses the loading spinner and displays a success message using the `toast` function.
+     * It also refreshes the page using the `router.refresh` function.
+     */
     onClientUploadComplete() {
+      // Dismiss the loading spinner and display a success message
       toast.dismiss("upload-begin");
       toast("Upload complete!");
+      // Refresh the page
       router.refresh();
     },
   });
 
   return (
     <div>
+      {/* Render a label and an input element for file upload */}
       <label htmlFor="upload-button">
         <UploadSVG />
       </label>
@@ -111,6 +137,7 @@ function LoadingSpinnerSVG() {
       height="24"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      fill="white"
     >
       <path
         d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
