@@ -23,9 +23,9 @@ export default async function HomePage() {
 async function Images() {
   const images = await getMyImages();
   return (
-    <div className="flex flex-wrap justify-center gap-4 p-4">
+    <div className="absolute flex flex-wrap justify-center gap-4 p-4">
       {images.map(({ url, name, id }) => (
-        <div className="flex h-48 w-48  flex-col" key={id}>
+        <div className=" flex h-48  w-60 flex-col" key={id}>
           <Link href={`/img/${id}`}>
             <Image
               src={url}
@@ -33,10 +33,9 @@ async function Images() {
               width={192}
               height={192}
               style={{ objectFit: "contain" }}
+              className="w-60 "
             />
           </Link>
-
-          <div className="">{name}</div>
         </div>
       ))}
     </div>
