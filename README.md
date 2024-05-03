@@ -27,3 +27,10 @@ Actually push to git manually pull on the server rebuild restart
 
     - [ ] install pm2 on server for auto reload app
     - [ ] view possibilities check repo for update and automate pull request
+
+## Other functionalities to add
+
+- [ ] Fix the layout
+- [ ] add possibility to mark multiple pics an delete
+- [ ] infinite scroll
+- [ ] Folder/albums (w/db)

@@ -94,6 +94,10 @@ export default function SimpleUploadButton() {
       // Refresh the page
       router.refresh();
     },
+    onUploadError: (error) => {
+      posthog.capture("Upload error", { error });
+      toast.error("Upload failed");
+    },
   });
 
   return (
