@@ -14,8 +14,8 @@
   - [ ] w/uploadthing.com have to remove this dependency after
 - [x] Taint (server only) ** safe request handling force server side [Taint docs ](https://nextjs.org/blog/security-nextjs-server-components-actions) **
 - [x] Use Next/image component
-- [ ] Error Managment (w/sentry?)
-- [ ] Routing/image page (parralel route)
+- [x] Error Managment (w/sentry?)
+- [x] Routing/image page (parralel route)
 - [ ] Delete button (w/ server actions)
 - [ ] Analytics (postHoh)
 - [ ] Ratelimiting (upstash)
