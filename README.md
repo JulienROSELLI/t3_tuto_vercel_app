@@ -16,8 +16,9 @@
 - [x] Use Next/image component
 - [x] Error Managment (w/sentry?)
 - [x] Routing/image page (parralel route)
+- [x] Analytics (postHoh)
 - [ ] Delete button (w/ server actions)
-- [ ] Analytics (postHoh)
+
 - [ ] Ratelimiting (upstash)
 
 ## ToDo deployment

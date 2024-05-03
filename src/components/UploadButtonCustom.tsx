@@ -63,7 +63,7 @@ export default function SimpleUploadButton() {
     onUploadBegin() {
       // Show a loading spinner and a message to indicate that the upload is in progress
       toast(
-        <div>
+        <div className="flex items-center gap-2 text-white">
           {/* Display the loading spinner */}
           <LoadingSpinnerSVG />
           {/* Display the message */}
