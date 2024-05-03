@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
 import { toast } from "sonner";
 
@@ -45,6 +46,7 @@ const useUploadThingInputProps = (...args: Input) => {
 export default function SimpleUploadButton() {
   // Get the router object using the `useRouter` hook
   const router = useRouter();
+  const posthog = usePostHog();
 
   // Call the `useUploadThingInputProps` function to get the input props
   const { inputProps } = useUploadThingInputProps("imageUploader", {
@@ -61,6 +63,7 @@ export default function SimpleUploadButton() {
      * message at a later time.
      */
     onUploadBegin() {
+      posthog.capture("upload_begin");
       // Show a loading spinner and a message to indicate that the upload is in progress
       toast(
         <div className="flex items-center gap-2 text-white">
