@@ -34,3 +34,15 @@ Actually push to git manually pull on the server rebuild restart
 - [ ] add possibility to mark multiple pics an delete
 - [ ] infinite scroll
 - [ ] Folder/albums (w/db)
+
+## technologies used
+
+[Vercel](https://vercel.com/juliens-projects-5ef1c8ec)
+[PostHog](https://posthog.com)
+[Next.js](https://nextjs.org)
+[Tailwind](https://tailwindcss.com)
+[UploadThing](https://uploadthing.com)
+[Clerk](https://clerk.com)
+[Sentry](https://sentry.io)
+[shadcn](https://ui.shadcn.com)
+[Modals](https://github.com/vercel/nextgram)
